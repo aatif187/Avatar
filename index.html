@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>AVATAR</title>
+    <link rel="shortcut icon" href="cool.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Girassol&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <style media="screen">
+      *{
+        background-color: #00bdaa;
+        text-align: center;
+
+      }
+      .items{
+        text-align: center;
+        border: 5px solid black;
+        width: 500px;
+        margin-top: 50px;
+        margin: auto;
+        /* margin-right: auto; */
+      }
+      img{
+        border: 2px solid black;
+        border-radius: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="container" style="text-align: center; margin-top: 30px;">
+        <h1 style="font-family: 'Pacifico', cursive;">What does your name say about your Character?!</h1>
+
+
+        <div class="items" style="text-align: center;margin-top:50px;background:#ffba5a;">
+
+          <div class="name" style="margin:20px;background:#ffba5a;">
+            <label style="font:bold;font-size:30px;background:#ffba5a;text-decoration:underline; ">Enter your Name</label><br>
+            <input style="background:#f1fa3c; font-size:17px;font-family: 'Oswald', sans-serif;" type="text" name="name" id="nameid">
+          </div>
+          <button  style="margin-top:0px; ;margin-bottom: 20px; background:black; color:white;">Click Me</button>
+          <div class="image" style="margin-top:20px;margin-bottom: 40px;background:#ffba5a;" >
+            <img style="background-color:#3a3535;"src="cool.jpg" height="200" width="200" id="imageid">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+          $("button").click(function(){
+            const a= $('#nameid').val();
+            $('#imageid').attr('src',`https://joeschmoe.io/api/v1/${a}
+`);
+          });
+        });
+        </script>
+
+  </body>
+</html>
